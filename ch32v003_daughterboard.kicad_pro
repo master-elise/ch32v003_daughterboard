@@ -60,7 +60,12 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "unconnected_items|138737140|99701600|F.Cu|4|8fb42ded-9111-42ff-963c-6b2e87292235|b2f60055-61ef-44ca-9337-26bcec56df1d",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -701,7 +706,7 @@
         "uuid": "9777148a-996a-4c68-8427-b31b6c8128d9"
       }
     ],
-    "used_designators": "",
+    "used_designators": "#PWR23-24,R1,SW1",
     "variants": []
   },
   "sheets": [
