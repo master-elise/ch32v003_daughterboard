@@ -16,7 +16,7 @@ to avoid dupplicate main functions during the compilation
 ``make test`` to probe the CH32V003 connected to pin named D0 (Atmega32U4 PD2) through a 1kohm resistor
 
 ``make write`` to flash a blinking LED program to the CH32V003, assuming the https://github.com/cnlohr/ch32fun repository
-is a the same directory level than this repository.
+is at the same directory level than this repository.
 
 ## Results
 
