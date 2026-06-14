@@ -4,7 +4,7 @@ Based on https://gitlab.com/BlueSyncLine/arduino-ch32v003-swio with the followin
 updates:
 * disable interrupts during communication to meet timing requirements due to the usage of ...
 * USB communication using LUFA and its interrupt driven implementation (no polling in the main loop) provided by https://git.jim.sh/jim/lufa-ftdi.git
-included as a submodule. In ``lufa-ftdi``: remain ``main.c`` to ``main.something`` 
+included as a submodule. In ``lufa-ftdi``: rename ``main.c`` to ``main.something`` 
 to avoid dupplicate main functions during the compilation
 
 ## Usage:
