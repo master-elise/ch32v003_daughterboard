@@ -51,14 +51,6 @@ int main(void) {
     uart_init();
     swio_init();
 
-DDRE |= 1<<6;
-for (int k=0;k<3;k++)
-  {PORTE&=~(1<<6);
-   _delay_us(100000);
-   PORTE|=(1<<6);
-   _delay_us(100000);
-  }
-
     //fputc(PROTOCOL_START, uart);
     printf("%c",PROTOCOL_START);
     while (1) {
