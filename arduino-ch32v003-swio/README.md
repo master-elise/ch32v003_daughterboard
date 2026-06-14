@@ -17,6 +17,7 @@ is a the same directory level than this repository.
 
 ## Results
 
+Testing that the communication is functional by probing the CH32V003 status:
 ```
 $ make test
 ../ch32fun/minichlink/minichlink -c /dev/ttyUSB3 -C ardulink -i
@@ -39,6 +40,7 @@ R32_ESIG_UNIID2: 0472bd2e
 R32_ESIG_UNIID3: ffffffff
 ```
 
+Using the programmer by sending a compiled program:
 ```
 $ make write
 ../ch32fun/minichlink/minichlink -c /dev/ttyUSB3 -C ardulink -w ../ch32fun/examples/gpio_and_adc/gpio_and_adc.bin flash -b
@@ -58,6 +60,8 @@ Image written.
 ```
 
 <img src="picture/IMG_20260614.jpg">
+
+Original README.md file:
 
 CH32V003 Arduino SWIO interface
 ===============================
