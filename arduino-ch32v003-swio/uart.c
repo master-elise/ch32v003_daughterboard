@@ -1,4 +1,3 @@
-#include <avr/io.h>
 #include "uart.h"
 #ifdef F_USB
 #include <avr/io.h>
@@ -56,7 +55,6 @@ int _uart_putchar(char c, FILE *uart) {
     UDR0 = c;
 #else
     fputc(c, uart);
-    _delay_us(8);
 #endif
     return 0;
 }
