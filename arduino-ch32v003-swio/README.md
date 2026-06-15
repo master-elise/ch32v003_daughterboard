@@ -66,6 +66,18 @@ Image written.
 
 Original README.md file:
 
+## Problem solved
+
+The challenge in replacing the UART based communication with USB is that LUFA
+using the interrupt scheme to avoid explicitly handling USB requests in the
+main loop generates a large amount of interrupts, breaking the fine timing
+requirements of the bitbanged SWIO protocol. To avoid thge effect of triggering 
+an interrupt 
+<a href="https://onlinedocs.microchip.com/oxy/GUID-174CB4CE-C435-49E8-BF01-3B8ABC11F056-en-US-8/GUID-BA5546FD-3B16-4EE3-A938-288854F7EABE.html">
+every 1 ms</a>, the SWIO functions in <a href="swio.c">swio.c</a> are
+protected with ``cli()`` and ``sei()`` statements to protect the fine timing
+requirements.
+
 CH32V003 Arduino SWIO interface
 ===============================
 

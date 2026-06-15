@@ -3020,121 +3020,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:PWR_FLAG"
-			(power global)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#FLG"
-				(at 0 1.905 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "PWR_FLAG"
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Special symbol for telling ERC where power comes from"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "flag power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_0"
-				(pin power_out line
-					(at 0 0 90)
-					(length 0)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:VCC"
 			(power global)
 			(pin_numbers
@@ -3354,12 +3239,6 @@
 		(uuid "91d1698b-3dbd-430e-ad44-6e5afcfc46e5")
 	)
 	(junction
-		(at 83.566 94.742)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9955c8c5-290a-4f14-a451-3229be7aad7e")
-	)
-	(junction
 		(at 183.388 104.394)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3370,6 +3249,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a5fe6f8e-2623-4e9e-b54a-d11c9caa793c")
+	)
+	(junction
+		(at 113.538 71.374)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "aa8ac84b-bfc2-4edf-8702-e62980431b42")
 	)
 	(junction
 		(at 85.09 155.448)
@@ -3432,7 +3317,7 @@
 		(uuid "f5e503ce-1396-4aec-bb29-4703ec369f99")
 	)
 	(no_connect
-		(at 92.964 148.59)
+		(at 92.71 148.59)
 		(uuid "08f56b6a-fc01-4b22-a0ce-1bda52229fbd")
 	)
 	(no_connect
@@ -3502,6 +3387,16 @@
 			(type default)
 		)
 		(uuid "04e40c76-cea4-4ffc-a230-6fdd941fbe63")
+	)
+	(wire
+		(pts
+			(xy 107.95 78.994) (xy 122.428 78.994)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05455e00-64af-4cf9-8894-8a73a9009f03")
 	)
 	(wire
 		(pts
@@ -3635,6 +3530,16 @@
 	)
 	(wire
 		(pts
+			(xy 113.538 71.12) (xy 113.538 71.374)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23802c4a-a280-4e31-9fde-61ea832e4174")
+	)
+	(wire
+		(pts
 			(xy 157.988 71.882) (xy 153.924 71.882)
 		)
 		(stroke
@@ -3755,7 +3660,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.128 78.994) (xy 138.938 78.994)
+			(xy 135.128 78.994) (xy 148.59 78.994)
 		)
 		(stroke
 			(width 0)
@@ -4015,6 +3920,16 @@
 	)
 	(wire
 		(pts
+			(xy 113.538 71.374) (xy 113.538 73.914)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82cccc92-aaff-4625-ac01-b791ad69add2")
+	)
+	(wire
+		(pts
 			(xy 145.288 87.884) (xy 145.288 95.504)
 		)
 		(stroke
@@ -4072,16 +3987,6 @@
 			(type default)
 		)
 		(uuid "92016dd7-5b5a-423a-b818-a2b011d2d40d")
-	)
-	(wire
-		(pts
-			(xy 118.618 78.994) (xy 122.428 78.994)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "92f4a336-3ea2-42cd-87b2-3f4f1ec773dd")
 	)
 	(wire
 		(pts
@@ -4145,16 +4050,6 @@
 	)
 	(wire
 		(pts
-			(xy 83.566 94.742) (xy 83.566 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9ce5b959-6d99-48e7-9491-b0f3b8564886")
-	)
-	(wire
-		(pts
 			(xy 136.398 95.504) (xy 136.398 98.044)
 		)
 		(stroke
@@ -4202,6 +4097,16 @@
 			(type default)
 		)
 		(uuid "add6dc59-9410-4b51-bd7a-913842121168")
+	)
+	(wire
+		(pts
+			(xy 107.95 71.374) (xy 113.538 71.374)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae1ff6f7-15d6-40a6-ad50-2655bab7276b")
 	)
 	(wire
 		(pts
@@ -4432,6 +4337,16 @@
 			(type default)
 		)
 		(uuid "ee876bd0-02c0-450c-90e9-27c804476965")
+	)
+	(wire
+		(pts
+			(xy 148.59 71.12) (xy 148.59 71.374)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef4641ab-dbaa-45da-be34-e3df8afe0599")
 	)
 	(wire
 		(pts
@@ -5288,7 +5203,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "12f20499-ba5a-4185-b6c8-683b60636917")
 		(property "Reference" "#PWR016"
 			(at 157.988 75.692 0)
@@ -5302,7 +5216,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 157.988 66.802 0)
+			(at 157.988 68.072 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5668,85 +5582,6 @@
 			(project "ch32v003_daughterboard"
 				(path "/9777148a-996a-4c68-8427-b31b6c8128d9"
 					(reference "#PWR020")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 141.478 98.044 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "380531a0-c837-4aff-ab4e-5d79491128a9")
-		(property "Reference" "#FLG02"
-			(at 141.478 96.139 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 141.478 92.964 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 141.478 98.044 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 141.478 98.044 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 141.478 98.044 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "38091822-0980-4c58-97bb-b30a19a94fdb")
-		)
-		(instances
-			(project "ch32v003_daughterboard"
-				(path "/9777148a-996a-4c68-8427-b31b6c8128d9"
-					(reference "#FLG02")
 					(unit 1)
 				)
 			)
@@ -6390,85 +6225,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 144.018 95.504 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "65a2104c-2b8b-46b4-b339-f0dc096ba50b")
-		(property "Reference" "#FLG01"
-			(at 144.018 93.599 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 144.018 90.424 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 144.018 95.504 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 144.018 95.504 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 144.018 95.504 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "36f7fd36-b716-4f30-8859-8494f54024cb")
-		)
-		(instances
-			(project "ch32v003_daughterboard"
-				(path "/9777148a-996a-4c68-8427-b31b6c8128d9"
-					(reference "#FLG01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Miscellaneous Connectors:root_0_Header 7X2_Miscellaneous Connectors.IntLib")
 		(at 88.646 92.202 90)
 		(unit 1)
@@ -6936,7 +6692,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 113.538 73.914 0)
+		(at 113.538 71.12 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6944,10 +6700,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "89ca70b0-f1ee-4d72-b648-a10d136894a6")
 		(property "Reference" "#PWR014"
-			(at 113.538 77.724 0)
+			(at 113.538 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6958,7 +6713,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 113.538 68.834 0)
+			(at 113.538 67.31 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6968,7 +6723,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 113.538 73.914 0)
+			(at 113.538 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6979,7 +6734,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 113.538 73.914 0)
+			(at 113.538 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6990,7 +6745,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 113.538 73.914 0)
+			(at 113.538 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7307,7 +7062,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 193.548 81.026 0)
+			(at 190.5 82.042 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7356,6 +7111,83 @@
 			(project "ch32v003_daughterboard"
 				(path "/9777148a-996a-4c68-8427-b31b6c8128d9"
 					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 148.59 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a279d772-7b30-4db6-9ee1-655aaae3a728")
+		(property "Reference" "#PWR023"
+			(at 148.59 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VCC"
+			(at 148.59 67.564 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 148.59 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 148.59 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b24ee395-e61c-4072-b490-647d5a8fcecd")
+		)
+		(instances
+			(project "ch32v003_daughterboard"
+				(path "/9777148a-996a-4c68-8427-b31b6c8128d9"
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -7733,7 +7565,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 164.338 79.756 0)
+			(at 161.798 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8055,6 +7887,87 @@
 				(path "/9777148a-996a-4c68-8427-b31b6c8128d9"
 					(reference "BAR1")
 					(unit 6)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 148.59 75.184 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b5dd81cc-5913-470b-a416-2d60aa24ca77")
+		(property "Reference" "R3"
+			(at 149.86 72.898 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "5600"
+			(at 148.59 77.724 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 146.812 75.184 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 75.184 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 148.59 75.184 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "741a0b68-0519-4ebf-a282-90793629b609")
+		)
+		(pin "2"
+			(uuid "414f0a2c-887a-48ba-8488-a5c98ca46047")
+		)
+		(instances
+			(project "ch32v003_daughterboard"
+				(path "/9777148a-996a-4c68-8427-b31b6c8128d9"
+					(reference "R3")
+					(unit 1)
 				)
 			)
 		)
@@ -8442,6 +8355,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 107.95 75.184 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d9affe85-d596-4a2f-a1fc-da6c1dd60af3")
+		(property "Reference" "R2"
+			(at 109.22 74.168 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "5600"
+			(at 107.95 77.724 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 106.172 75.184 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 107.95 75.184 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 107.95 75.184 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f462a090-8ae1-4042-ab7b-8d52342c800a")
+		)
+		(pin "2"
+			(uuid "6ce24057-7d0e-4ace-9d31-b225c745e449")
+		)
+		(instances
+			(project "ch32v003_daughterboard"
+				(path "/9777148a-996a-4c68-8427-b31b6c8128d9"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:VCC")
 		(at 83.566 92.456 0)
 		(unit 1)
@@ -8607,7 +8601,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "e052ae69-0a46-40e1-b619-dd7cb31639a3")
 		(property "Reference" "#PWR013"
 			(at 165.608 95.504 0)
@@ -8621,7 +8614,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 165.608 86.614 0)
+			(at 165.608 87.884 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
