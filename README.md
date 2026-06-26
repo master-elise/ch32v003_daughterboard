@@ -52,3 +52,52 @@ and ``minichlink`` might or might not fail depending on the programmer available
 ```
 ../../ch32fun//../minichlink/minichlink -c /dev/ttyUSB0 -C ardulink -w gpio_and_adc.bin flash -b
 ```
+
+## Example of a GDB session using the ardulink interface
+
+Terminal 1:
+```
+ch32fun/examples/gpio_and_adc$ ../../ch32fun//../minichlink/minichlink -c /dev/ttyUSB0 -C ardulink -G
+minichlink version - 8e9d331abce4f0aff5fc4f1c162844bff76fbf28
+Opening serial port /dev/ttyUSB0 at 115200 baud.
+Ardulink: synced.
+Ardulink: target power 1
+Interface Setup
+Detected CH32V003
+Flash Storage: 16 kB
+Part UUID: 9b-77-ab-cd-04-72-bd-2e
+Part Type: 00-30-05-10
+Read protection: disabled
+gdbserver running on port 3333
+GDBServer Running
+```
+
+Terminal 2:
+```
+ch32fun/examples/gpio_and_adc$ gdb-multiarch -q gpio_and_adc.elf
+(gdb) target remote localhost:3333
+Remote debugging using localhost:3333
+0x00000862 in DelaySysTick (n=6000000) at ../../ch32fun/ch32fun.c:1884
+1884            while( ((int32_t)( SysTick->CNT - targend )) < 0 );
+(gdb) list main
+...
+(gdb) list
+...
+(gdb) list
+...
+60                      printf( "1: %d %d %d %d\n",
+(gdb) break 60
+Breakpoint 1 at 0x7d8: file ch32fun/examples/gpio_and_adc/gpio_and_adc.c, line 60.
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at ch32fun/examples/gpio_and_adc/gpio_and_adc.c:60
+60                      printf( "1: %d %d %d %d\n",
+(gdb) bt
+#0  main () at ch32fun/examples/gpio_and_adc/gpio_and_adc.c:60
+(gdb) print $sp
+$1 = (void *) 0x200007e8
+```
+
+
+
