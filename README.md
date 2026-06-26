@@ -48,4 +48,7 @@ riscv32-elf-objcopy -j .storage -O binary gpio_and_adc.elf gpio_and_adc_ext.bin
 riscv32-elf-objcopy -O ihex gpio_and_adc.elf gpio_and_adc.hex
 ../../ch32fun//../minichlink/minichlink -w gpio_and_adc.bin flash -b
 ```
-and ``minichlink`` might or might not fail depending on the programmer available on the computer.
+and ``minichlink`` might or might not fail depending on the programmer available on the computer. When using the Atmega32U4-based programmer found in ``arduino-ch32v003-swio``, replace the programming command with
+```
+../../ch32fun//../minichlink/minichlink -c /dev/ttyUSB0 -C ardulink -w gpio_and_adc.bin flash -b
+```
