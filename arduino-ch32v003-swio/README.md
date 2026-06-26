@@ -19,13 +19,18 @@ Olimexino32U4 GND      -> GND
 
 ## Usage:
 
-``make`` to compile
-
-``make flash`` to program the Olimexino32U4 board fitted with the AVR109 bootloader
-
-``make test`` to probe the CH32V003 connected to pin named D0 (Atmega32U4 PD2) through a 1kohm resistor
-
-``make write`` to flash a blinking LED program to the CH32V003, assuming the https://github.com/cnlohr/ch32fun repository
+```
+sudo apt install avr-libc gcc-avr
+git clone --recursive https://github.com/master-elise/ch32v003_daughterboard
+cd ch32v003_daughterboard/arduino-ch32v003-swio
+make
+make flash
+```
+so that
+* ``make`` to compile
+* ``make flash`` to program the Olimexino32U4 board fitted with the AVR109 bootloader
+* ``make test`` to probe the CH32V003 connected to pin named D0 (Atmega32U4 PD2) through a 1kohm resistor
+* ``make write`` to flash a blinking LED program to the CH32V003, assuming the https://github.com/cnlohr/ch32fun repository
 is at the same directory level than this repository.
 
 ## Results
