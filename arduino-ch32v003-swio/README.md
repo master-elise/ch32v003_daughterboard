@@ -10,10 +10,12 @@ to avoid dupplicate main functions during the compilation
 ## Connections
 
 ```
-Olimexino32U4 D0 (PD1) -> SWIO through a 500 to 1kohm resistor
-Olimexino32U4 D1 (PD2) -> Vcc
+Olimexino32U4 D0 (PD2) -> SWIO through a 500 to 1kohm resistor
+Olimexino32U4 D1 (PD3) -> Vcc
 Olimexino32U4 GND      -> GND
 ```
+
+<img src="picture/IMG_20260614.jpg">
 
 ## Usage:
 
@@ -69,8 +71,6 @@ Writing image
 
 Image written.
 ```
-
-<img src="picture/IMG_20260614.jpg">
 
 Original README.md file:
 
