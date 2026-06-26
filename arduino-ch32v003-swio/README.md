@@ -7,6 +7,14 @@ updates:
 included as a submodule. In ``lufa-ftdi``: rename ``main.c`` to ``main.something`` 
 to avoid dupplicate main functions during the compilation
 
+## Connections
+
+```
+Olimexino32U4 D0 (PD1) -> SWIO through a 500 to 1kohm resistor
+Olimexino32U4 D1 (PD2) -> Vcc
+Olimexino32U4 GND      -> GND
+```
+
 ## Usage:
 
 ``make`` to compile
