@@ -50,14 +50,14 @@ riscv32-elf-objcopy -O ihex gpio_and_adc.elf gpio_and_adc.hex
 ```
 and ``minichlink`` might or might not fail depending on the programmer available on the computer. When using the Atmega32U4-based programmer found in ``arduino-ch32v003-swio``, replace the programming command with
 ```
-../../ch32fun//../minichlink/minichlink -c /dev/ttyUSB0 -C ardulink -w gpio_and_adc.bin flash -b
+../../minichlink/minichlink -c /dev/ttyUSB0 -C ardulink -w gpio_and_adc.bin flash -b
 ```
 
 ## Example of a GDB session using the ardulink interface
 
 Terminal 1:
 ```
-ch32fun/examples/gpio_and_adc$ ../../ch32fun//../minichlink/minichlink -c /dev/ttyUSB0 -C ardulink -G
+ch32fun/examples/gpio_and_adc$ ../../minichlink/minichlink -c /dev/ttyUSB0 -C ardulink -G
 minichlink version - 8e9d331abce4f0aff5fc4f1c162844bff76fbf28
 Opening serial port /dev/ttyUSB0 at 115200 baud.
 Ardulink: synced.
