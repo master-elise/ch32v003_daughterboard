@@ -72,8 +72,6 @@ Writing image
 Image written.
 ```
 
-Original README.md file:
-
 ## Problem solved
 
 The challenge in replacing the UART based communication with USB is that LUFA
@@ -85,6 +83,8 @@ an interrupt
 every 1 ms</a>, the SWIO functions in <a href="swio.c">swio.c</a> are
 protected with ``cli()`` and ``sei()`` statements to protect the fine timing
 requirements.
+
+## Original README.md file:
 
 CH32V003 Arduino SWIO interface
 ===============================
