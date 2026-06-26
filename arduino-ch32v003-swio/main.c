@@ -19,7 +19,7 @@
 
 #define TARGET_POWER_PORT  PORTD
 #define TARGET_POWER_DDR   DDRD
-#define TARGET_POWER_BIT   2
+#define TARGET_POWER_BIT   3
 
 void target_power(int x) {
     if (x)
