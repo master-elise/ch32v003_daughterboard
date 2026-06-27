@@ -4,10 +4,14 @@
 #include "ftdi.h"
 #endif
 
+#ifndef F_USB
 int _uart_putchar(char c, FILE *unused);
 int _uart_getchar(FILE *unused);
 FILE uart_file = FDEV_SETUP_STREAM(_uart_putchar, _uart_getchar, _FDEV_SETUP_READ | _FDEV_SETUP_WRITE);
 FILE *uart = &uart_file;
+#else
+FILE *uart;
+#endif
 
 void uart_init() {
 #ifndef F_USB
@@ -32,32 +36,29 @@ void uart_init() {
 
     /* Ready to go */
     uart=stdout;  // needed to return to the original function fputc(val, uart); instead of printf();
-    sei();        // I (JMF) do not understand though how overwriting *uart = &uart_file; helps using 
-#endif            // fputc() and still use printf()
-}
+    sei();        // stdout = ftdi_stream (tested by printing pointer values) so uart is assigned FILE *ftdi_stream = &_ftdi_stream; in lufa_ftdi/ftdi.c 
+#endif            
+}                
 
-int _uart_putchar(char c, FILE *uart) {
 #ifndef F_USB
+int _uart_putchar(char c, FILE *uart) {
     // Wait for the UART to become ready.
     while (!(UCSR0A & _BV(UDRE0)))
         ;
 
     // Send.
     UDR0 = c;
-#else
-    fputc(c, uart);
-#endif
+
     return 0;
 }
 
 int _uart_getchar(FILE *unused) {
     (void)*unused;
-#ifndef F_USB
+
     // Wait for a character.
     while (!(UCSR0A & _BV(RXC0)))
         ;
+
     return UDR0;
-#else
-    return( getchar() );
-#endif
 }
+#endif
