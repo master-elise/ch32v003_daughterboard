@@ -59,11 +59,7 @@ int main(void) {
             case PROTOCOL_READ_REG:
                 fread(&reg, sizeof(uint8_t), 1, uart);
                 val = swio_read_reg(reg);
-//                fwrite(&val, sizeof(uint32_t), 1, uart);
-                putchar((val)&0xff);
-                putchar((val>>8)&0xff);
-                putchar((val>>16)&0xff);
-                putchar((val>>24)&0xff);
+                fwrite(&val, sizeof(uint32_t), 1, uart); // putchar((val)&0xff); putchar((val>>8)&0xff); putchar((val>>16)&0xff); putchar((val>>24)&0xff);
                 break;
         }
     }
