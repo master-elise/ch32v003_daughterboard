@@ -32,8 +32,8 @@ void uart_init() {
 
     /* Ready to go */
     uart=stdout;  // needed to return to the original function fputc(val, uart); instead of printf();
-    sei();
-#endif
+    sei();        // I (JMF) do not understand though how overwriting *uart = &uart_file; helps using 
+#endif            // fputc() and still use printf()
 }
 
 int _uart_putchar(char c, FILE *uart) {
