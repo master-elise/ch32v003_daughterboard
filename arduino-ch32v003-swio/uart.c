@@ -1,16 +1,6 @@
 #include "uart.h"
 #ifdef F_USB
-#include <avr/io.h>
-#include <avr/wdt.h>
 #include <avr/power.h>
-#include <avr/interrupt.h>
-#include <string.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <util/delay.h>
-
-#include <LUFA/Drivers/USB/USB.h>
-
 #include "ftdi.h"
 #endif
 
@@ -41,6 +31,7 @@ void uart_init() {
     ftdi_init(FTDI_STDIO | FTDI_BLOCKING);
 
     /* Ready to go */
+    uart=stdout;  // needed to return to the original function fputc(val, uart); instead of printf();
     sei();
 #endif
 }
