@@ -26,7 +26,7 @@ void uart_init() {
     UCSR0B |= _BV(TXEN0) | _BV(RXEN0);
 #else
     /* Divide 8MHz clock by 1 */
-    clock_prescale_set(clock_div_1);
+    clock_prescale_set(clock_div_1); // JMF: not needed, but provided as example in lufa_ftdi/main.c
 
     /* Initialize USB */
     USB_Init();
@@ -35,8 +35,8 @@ void uart_init() {
     ftdi_init(FTDI_STDIO | FTDI_BLOCKING);
 
     /* Ready to go */
-    uart=stdout;  // needed to return to the original function fputc(val, uart); instead of printf();
-    sei();        // stdout = ftdi_stream (tested by printing pointer values) so uart is assigned FILE *ftdi_stream = &_ftdi_stream; in lufa_ftdi/ftdi.c 
+    uart=stdout;  // stdout = ftdi_stream (tested by printing pointer values) so uart is assigned FILE *ftdi_stream = &_ftdi_stream; in lufa_ftdi/ftdi.c 
+    sei();
 #endif            
 }                
 

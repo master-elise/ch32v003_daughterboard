@@ -4,9 +4,6 @@
 #include "uart.h"
 #include "swio.h"
 
-#include <LUFA/Drivers/USB/USB.h>
-#include "ftdi.h"
-
 #define TARGET_POWER_PORT  PORTD
 #define TARGET_POWER_DDR   DDRD
 #define TARGET_POWER_BIT   3    // D1
