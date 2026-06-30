@@ -5548,7 +5548,7 @@
 		(dnp no)
 		(uuid "1feb2ec6-9577-487d-bf87-85a07a672b1b")
 		(property "Reference" "SW1"
-			(at 118.618 101.6 0)
+			(at 118.618 106.68 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5559,6 +5559,7 @@
 		)
 		(property "Value" "SW_SPST"
 			(at 117.602 106.934 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6968,10 +6969,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "70c0086d-8321-4e80-a1a0-d0a3de3b7e5b")
 		(property "Reference" "R1"
-			(at 115.57 99.8219 0)
+			(at 114.3 98.806 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6981,8 +6981,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
-			(at 115.57 102.3619 0)
+		(property "Value" "5k6"
+			(at 112.776 102.87 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
