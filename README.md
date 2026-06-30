@@ -99,4 +99,33 @@ Breakpoint 1, main () at ch32fun/examples/gpio_and_adc/gpio_and_adc.c:60
 $1 = (void *) 0x200007e8
 ```
 
+## Using the Debian binary toolchain
+The baremetal toolchain ``sudo apt install gcc-riscv64-unknown-elf`` can be used to compile the ``ch32fun`` examples, but care must be taken about
+```
+NEWLIB?=/usr/include/newlib
+```
+in ``ch32fun/ch32fun.mk`` since Debian no longer supports Newlib and lacking this directory, the compiler searches
+for alternative ``stdio.h`` in ``/usr/include``. The Linux (operating system) ``stdio.h`` definition is incompatible with
+the baremetal definition and leads to the error
+```
+../../ch32fun//ch32fun.c:1652:10: error: expected declaration specifiers or '...' before 'stdout'
+```
+This is solved by using the ``stdio.h`` of any Newlib source code, e.g.
+```
+NEWLIB=.../stm32/ZephyrOS/modules/lib/picolibc/newlib/libc/stdio/
+```
+since I happen to have a Newlib install from ZephyrOS, and in this case the compilation succeeds with
+```
+ch32fun/examples/gpio_and_adc$ make
+riscv64-unknown-elf-gcc -E -P -x c -DTARGET_MCU=CH32V003 -DMCU_PACKAGE=1 -DTARGET_MCU_LD=0 -DTARGET_MCU_MEMORY_SPLIT= ../../ch32fun//ch32fun.ld > ../../ch32fun//generated__.ld
+riscv64-unknown-elf-gcc -o gpio_and_adc.elf ../../ch32fun//ch32fun.c gpio_and_adc.c   -g -Os -flto -ffunction-sections -fdata-sections -fmessage-length=0 -msmall-data-limit=8 -fno-tree-loop-distribute-patterns -march=rv32ec -mabi=ilp32e -DCH32V003 -static-libgcc -I../../ch32fun//../extralibs -I.../stm32/ZephyrOS/modules/lib/picolibc/newlib/libc/stdio// -I../../ch32fun/ -nostdlib -I. -Wall  -Wl,--print-memory-usage -Wl,-Map=gpio_and_adc.map -L../../ch32fun//../misc -lgcc -lgcc -T ../../ch32fun//generated__.ld -Wl,--gc-sections
+Memory region         Used Size  Region Size  %age Used
+           FLASH:        2124 B        16 KB     12.96%
+             RAM:           0 B         2 KB      0.00%
+riscv64-unknown-elf-objdump -S gpio_and_adc.elf > gpio_and_adc.lst
+riscv64-unknown-elf-objcopy -R .storage  -O binary gpio_and_adc.elf gpio_and_adc.bin
+riscv64-unknown-elf-objcopy -j .storage -O binary gpio_and_adc.elf gpio_and_adc_ext.bin
+riscv64-unknown-elf-objcopy -O ihex gpio_and_adc.elf gpio_and_adc.hex
+```
+
 <img src="IMG_20260630_152816_968.jpg">
