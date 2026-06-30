@@ -99,5 +99,4 @@ Breakpoint 1, main () at ch32fun/examples/gpio_and_adc/gpio_and_adc.c:60
 $1 = (void *) 0x200007e8
 ```
 
-
-
+<img src="IMG_20260630_152816_968.jpg">
