@@ -2,7 +2,6 @@
 #define _FUNCONFIG_H
 
 #define FUNCONF_USE_DEBUGPRINTF 0
-// no serial printf
 #define FUNCONF_USE_UARTPRINTF 1
 
 // Place configuration items here, you can see a full list in ch32fun/ch32fun.h
