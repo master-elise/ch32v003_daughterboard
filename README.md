@@ -114,7 +114,12 @@ This is solved by using the ``stdio.h`` of any Newlib source code, e.g.
 ```
 NEWLIB=.../stm32/ZephyrOS/modules/lib/picolibc/newlib/libc/stdio/
 ```
-since I happen to have a Newlib install from ZephyrOS, and in this case the compilation succeeds with
+since I happen to have a Newlib install from ZephyrOS, but also valid by installing the last newlib-related package in
+Debian named ``sudo apt install libnewlib-sh-elf-dev`` and in this case
+```
+NEWLIB=/usr/sh-elf/include
+```
+In both cases the compilation succeeds with
 ```
 ch32fun/examples/gpio_and_adc$ make
 riscv64-unknown-elf-gcc -E -P -x c -DTARGET_MCU=CH32V003 -DMCU_PACKAGE=1 -DTARGET_MCU_LD=0 -DTARGET_MCU_MEMORY_SPLIT= ../../ch32fun//ch32fun.ld > ../../ch32fun//generated__.ld
