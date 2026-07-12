@@ -7476,7 +7476,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "768c3ab9-1ef7-4ddc-9732-4a7814f2e136")
 		(property "Reference" "Y2"
 			(at 88.9 60.1979 90)
@@ -7490,7 +7489,7 @@
 			)
 		)
 		(property "Value" "24 MHz Farnell 4165823"
-			(at 88.9 62.7379 90)
+			(at 95.25 74.168 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

@@ -1946,7 +1946,7 @@
 		(descr "https://www.amphenolrf.com/library/download/link/link_id/593640/parent/901-144/")
 		(tags "SMA THT Female Jack Vertical")
 		(property "Reference" "J4"
-			(at -0.44 -4.56 90)
+			(at 2.54 -5.06 90)
 			(layer "F.SilkS")
 			(uuid "0d031754-f257-4e81-99ca-1dafc3948933")
 			(effects
@@ -2203,15 +2203,15 @@
 			(uuid "fb6554cf-3ca4-42c3-9d76-0fb4541b1b44")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_Coaxial.3dshapes/SMA_Amphenol_901-144_Vertical.step"
+		(model "${KIPRJMOD}/901-144-8RFX.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 0 0 9.5)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -0 -90 -0)
 			)
 		)
 	)
@@ -7792,6 +7792,19 @@
 		)
 		(layer "Edge.Cuts")
 		(uuid "5aabe954-0c88-4047-b34c-34da5f18afe2")
+	)
+	(gr_text "CH32V003\nGPSDO"
+		(at 179.28714 83.0016 0)
+		(layer "F.SilkS")
+		(uuid "27c077cb-8720-434d-90a3-e525e00ce3f8")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
 	)
 	(segment
 		(start 169.38714 86.3016)
