@@ -11,7 +11,8 @@ make
 
 ## Output
 
-In a terminal connected to the virtual serial port of the RISCV: notice that device 0x4F=0x9E/2 responded, meaning the A0=A1=A2=1
+In a terminal connected to the virtual serial port of the RISCV: notice that device 0x4F=0x9E/2 responded, meaning the A0=A1=A2=1 (should be 0x90/2=0x48 if
+A0=A1=A2=0):
 
 ```
 ----Scanning I2C Bus for Devices----
