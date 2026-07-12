@@ -1,4 +1,4 @@
-# <a href="https://www.ti.com/lit/ds/symlink/lm75b.pdf?ts=1783767986413&ref_url=https%253A%252F%252Fwww.ti.com">LM75 I2C</a> temperature sensor
+# <a href="https://www.ti.com/lit/ds/symlink/lm75b.pdf?ts=1783767986413&ref_url=https%253A%252F%252Fwww.ti.com">LM75 I2C</a> temperature sensor
 
 ## Usage
 
