@@ -1,3 +1,6 @@
 [submodule "arduino-ch32v003-swio/lufa-ftdi"]
 	path = arduino-ch32v003-swio/lufa-ftdi
 	url = https://git.jim.sh/jim/lufa-ftdi.git
+[submodule "examples/i2c_lm75/CH32V00x_lib_i2c"]
+	path = examples/i2c_lm75/CH32V00x_lib_i2c
+	url = https://github.com/ADBeta/CH32V00x_lib_i2c
