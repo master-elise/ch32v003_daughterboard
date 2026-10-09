@@ -8,3 +8,5 @@ For using the external resonator, see ``ch32fun/examples/external_crystal`` and 
 in ``funconfig.h``.
 
 Check watchdog timer in ``ch32fun/examples/iwdg``.
+
+<img src="IMG_20261009_161320_503~2.jpg">
